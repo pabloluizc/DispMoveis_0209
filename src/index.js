@@ -1,17 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@fortawesome/fontawesome-free/css/all.css'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const App = () => {    
+    return {
+        <div ClassName="container border mt-2"> //tenho uma div com a classe container e com a classe border e com a classe margin top 2
+            <div ClassName="row border-bottom"> 
+                { /* h1.display-5 text-center{Seus pedidos} */ }
+                <h1 ClassName="display-5 text-center">Seus Pedidos</h1>            
+            </div>
+            {/* .row */}
+            <div ClassName="row">
+                <div className="col-sm-8 col md-6">
+                    {/* cartão do bootstrap */}
+                    <div className="card">
+                        {/* <div className="card-header text-muted">22/04/21</div>*/}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    }     
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    ReactDOM.render(    
+    <App />,    
+    document.querySelector('#root')
+    )
